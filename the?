@@ -1,0 +1,65 @@
+#-----import statements-----
+import turtle as trtl
+import random
+#-----countdown variables-----
+font_setup = ("Arial", 20, "normal")
+timer = 30
+counter_interval = 1000   #1000 represents 1 second
+timer_up = False
+
+#-----countdown writer-----
+counter =  trtl.Turtle()
+THEFLINKIESTFLINKY = trtl.Turtle()
+counter.goto(100,100)
+SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU = trtl.Turtle()
+SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU = 0
+#-----game functions-----
+thesilly = trtl.Turtle()
+thesilly.color("red")
+thesilly.shape("circle")
+def countdown():
+  global timer, timer_up
+  counter.clear()
+  if timer <= 0:
+    counter.write("Time's Up", font=font_setup)
+    timer_up = True
+  elif timer == 0:
+    SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU = SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU + 0
+  else:
+    counter.write("Timer: " + str(timer), font=font_setup)
+    timer -= 1
+    counter.getscreen().ontimer(countdown, counter_interval)
+
+
+def fyegiweufgfuwfjkfkugsfuofhjkjldvdfgsjipergkmnduhiiohudegfihfbhkhkbjbkwgrj(grinky, winky):
+    global SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU
+def change_position(input1,input2):
+    thesilly.shape("circle")
+    thesilly.forward(0.1)
+    thesilly.teleport(random.randint(-300,300),random.randint(-300,300))
+    thesilly.forward(0.1)
+    global SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU
+    
+    if timer >0:
+       SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU = SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU+1 
+    THEFLINKIESTFLINKY.penup()
+    THEFLINKIESTFLINKY.goto(-200,200)
+    THEFLINKIESTFLINKY.pendown()
+    THEFLINKIESTFLINKY.clear()
+    THEFLINKIESTFLINKY.write(SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU, font=font_setup)
+    if countdown== 0:
+       thesilly.penup()
+       thesilly.hideturtle()
+       thesilly.clear()
+       thesilly.shape("blank")
+while timer == 0:
+  THEFLINKIESTFLINKY.write(SCOREIGJIWJGEOIGEWGUOHWEGUGHWEUGHWEGOIUHWEGWOU, + 0)
+    
+        
+thesilly.onclick(change_position)
+
+
+#---------events---------
+wn = trtl.Screen()
+wn.ontimer(countdown, counter_interval) 
+wn.mainloop()
